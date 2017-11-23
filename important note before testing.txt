@@ -1,0 +1,16 @@
+user can view evaluated score of answers any time but plagiarism can't be seen any time because to detect plag R script which is running in Azure will be required
+text files. These txt files are automatically generated inside 'ansfiles' folder in host server. These txt files contains all submitted answers of student and for each student
+ a text file will be generated named with username.txt. So before allowing students to see plagiarism you will have to download this ansfiles folder from host server then
+ convert in zip then upload it into Azure ML. After successful uploading students can check their plag report.
+
+Steps to upload ansfiles.zip in Azure:-
+1)Open azure ml and sign in with account where R scripts are running.
+2)Go to new and click on upload dataset, choose 'ansfiles.zip' from desktop.
+3)Then it will ask is it a new version of existing dataset, click yes and upload.
+4)At footer of azure there will be an option for deploy web service, click on it.
+
+Changes in secondpage.html:-
+go to this html page  and find view plag button then replace it's action by 'fetchplagscore.php'. (remove '#')
+
+Now you have done.
+ 
